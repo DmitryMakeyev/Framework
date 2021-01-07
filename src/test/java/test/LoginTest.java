@@ -14,9 +14,9 @@ public class LoginTest extends CommonConditions{
         User testUser= UserCreator.withAllProperty();
         LoginPage loginPage= new LoginPage(driver)
                 .openPage()
-                .closePrompt()
                 .inputUserLogin(testUser.getEmail())
-                .inputUserPassword(testUser.getPassword());
+                .inputUserPassword(testUser.getPassword())
+                .closePrompt();
 
         AccountPage accountPage = loginPage.clickSubmitButton();
 
